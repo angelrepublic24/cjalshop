@@ -1,0 +1,88 @@
+<div fxLayoutAlign="center center">
+  <h3><a [routerLink]="['/']">Cjalshop</a></h3>
+</div>
+<div class="login-wrapper py-4 my-3" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+
+      
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput name="name" #name="ngModel" [(ngModel)]="user.name" placeholder="Name" type="text" required>
+          <span class="form_error" *ngIf="name.touched && !name.valid">
+            The name is required
+        </span>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput name="lname" #lname="ngModel" [(ngModel)]="user.lname" placeholder="Last Name" type="text" required>
+          <span class="form_error" *ngIf="name.touched && !name.valid">
+            The last name is required
+        </span>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput name="email" #email="ngModel" [(ngModel)]="user.email" placeholder="Email" type="email" required>
+          <span class="form_error" *ngIf="name.touched && !name.valid">
+            The email is required
+        </span>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput #password placeholder="Password" type="password" required>
+        </mat-form-field>
+
+        <table class="d-flex justify-content-between">
+          
+            <td class="birth" >
+              <mat-form-field appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input #birth matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </td>
+            <td class="sex">
+              <mat-radio-group aria-label="Select an option">
+                <h6 class="text-center">Sex: </h6>
+                <mat-radio-button class="px-2" value="1">Male</mat-radio-button>
+                <mat-radio-button value="2">Female</mat-radio-button>
+              </mat-radio-group>
+            </td>
+        </table>
+        <table class="d-flex justify-content-between">
+          <td>
+            <mat-select-country appearance="outline"
+              #country
+              label="Country"
+              class="className"
+              formControlName="country"
+              (onCountrySelected)="onCountrySelected($event)">
+           </mat-select-country>
+          </td>
+          <td>
+            <mat-form-field>
+              <input #phone matInput placeholder="Phone" type="tel" >
+            </mat-form-field>
+          </td>
+        </table>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput #state placeholder="State" type="text" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput #address placeholder="Address" type="text" required>
+        </mat-form-field>
+       
+      </mat-card-content>
+
+      <button mat-stroked-button color="accent" [disabled]="!registerForm.form.valid" class="btn-block">Register</button>
+
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="219ad67f-ace2-4d39-89a7-f12bfe02156b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/branchOffice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/branchOffice.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1j6w2IPUfVPD7sPkvwYrDDGSb9T" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Angel/Cursos/Curso-Javascript" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Project\cjalshop\views\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Project\cjalshop\views\src\app\service" />
+      <recent name="C:\Project\cjalshop\views\src\app\components" />
+      <recent name="C:\Project\cjalshop\views\pages" />
+      <recent name="C:\Project\cjalshop\views" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="219ad67f-ace2-4d39-89a7-f12bfe02156b" name="Default Changelist" comment="" />
+      <created>1603137650512</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603137650512</updated>
+      <workItem from="1603137654332" duration="2774000" />
+      <workItem from="1603223950562" duration="896000" />
+      <workItem from="1603839007178" duration="729000" />
+      <workItem from="1603891257591" duration="7363000" />
+      <workItem from="1603971289430" duration="1148000" />
+      <workItem from="1603999882358" duration="488000" />
+      <workItem from="1604155551158" duration="784000" />
+      <workItem from="1604158137696" duration="850000" />
+      <workItem from="1604240010837" duration="2581000" />
+      <workItem from="1604248509171" duration="5416000" />
+      <workItem from="1604287926216" duration="2285000" />
+      <workItem from="1604320173652" duration="37000" />
+      <workItem from="1604403996113" duration="2393000" />
+      <workItem from="1605763322772" duration="2764000" />
+      <workItem from="1605801212581" duration="7127000" />
+      <workItem from="1605846437076" duration="1016000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="579" y="184" key="FileChooserDialogImpl" timestamp="1605814645292">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="579" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1605814645292" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1603898651054">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1603898651054" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1605801747624">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1605801747624" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/branchOffice.js</url>
+          <line>5</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
