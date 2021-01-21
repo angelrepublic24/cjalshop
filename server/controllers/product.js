@@ -1,5 +1,6 @@
 const Product = require('../models/product')
-const fs = require('fs')
+const fs = require('fs');
+const path = require('path');
 
 const _ = require('underscore')
 
@@ -100,9 +101,9 @@ var controllers = {
             var fileExt = extSplit[1];
 
             if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
-                Product.findByIdAndUpdate(productId, { image: fileName }, { new: true }, (err, productUpdated) => {
+                Project.findByIdAndUpdate(productId, { image: fileName }, { new: true }, (err, productUpdated) => {
                     if (err) return res.status(500).send({ message: "La imagen no ha sido guardada" });
-                    if (!productUpdated) return res.status(404).send({ message: "La imagen no ha sido encontrada para guardar" });
+                    if (!projectUpdated) return res.status(404).send({ message: "La imagen no ha sido encontrada para guardar" });
                     return res.status(200).send({
                         product: productUpdated
                     });

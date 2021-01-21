@@ -1,7 +1,8 @@
-const Company = require('../models/company')
-const fs = require('fs')
+const Company = require('../models/company');
+const fs = require('fs');
+const path = require('path');
 
-const _ = require('underscore')
+const _ = require('underscore');
 
 var controllers = {
     

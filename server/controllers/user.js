@@ -1,13 +1,11 @@
-const User = require('../models/user')
+const User = require('../models/user');
 const fs = require('fs')
 require('../config/config')
-const bcrypt = require('bcrypt')
-const _ = require('underscore')
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const _ = require('underscore');
 
 var controllers = {
-    
-    
-    
     createUser: function(req, res){
         let body = req.body;
 
@@ -16,21 +14,22 @@ var controllers = {
             lname: body.lname,
             email: body.email,
             password: bcrypt.hashSync(body.password, 10),
-            img: body.img,
-            status: body.status,
-            google: body.google,
+            birth: body.birth,
+            sex: body.sex,
+            phone: body.phone,
             role: body.role
         })
 
         user.save((err, userDB)=>{
-            if(err) return res.status(500).send({message: 'Error al crear usuario'})
+            if(err) return res.status(500).json({
+                ok: false,
+                message: 'Error al crear usuario'
+            })
             if(!userDB) return res.status(400).send({message: 'No existe esta variable'})
 
             var token = jwt.sign({
-                user
-              }, process.env.SECRET, 
-                process.env.LIMIT_TOKEN
-              );
+                user: userDB
+              }, process.env.SECRET, {expiresIn: process.env.LIMIT_TOKEN});
             return res.status(200).json({
                 ok: true,
                 user: userDB,

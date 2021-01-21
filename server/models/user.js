@@ -45,14 +45,6 @@ var userSchema = new Schema({
         type: Number,
         required: [true, 'The phone is required']
     },
-    country:{
-        type: String,
-        requide: false
-    },
-    city: {
-        type: String,
-        required: false
-    },
     role: {
         type: String,
         enum: rolesValidators,

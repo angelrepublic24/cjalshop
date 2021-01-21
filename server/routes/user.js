@@ -5,7 +5,7 @@ const {verifyToken, verifyAdminRole} = require('../middlewares/autenticacion')
 let router = express.Router();
 
 
-router.post('/signup', verifyToken, UserControllers.createUser);
+router.post('/signup', UserControllers.createUser);
 router.get('/get-user/:id', verifyToken, UserControllers.getUser);
 router.get('/get-all-user', verifyToken, UserControllers.getAllUsers);
 router.put('/update-user/:id', verifyToken, UserControllers.updateUser);

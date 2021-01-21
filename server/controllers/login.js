@@ -63,7 +63,7 @@ var controllers = {
                 user: userDB,
                 token
             })
-                .render()
+                // .render('index')
 
         })
     }

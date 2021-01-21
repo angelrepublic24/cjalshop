@@ -1,44 +1,30 @@
-<section class="section-conten padding-y" style="min-height:84vh">
+<div fxLayoutAlign="center center">
+  <h3><a [routerLink]="['/']">Cjalshop</a></h3>
+</div>
 
-  <!-- ============================ COMPONENT LOGIN   ================================= -->
-  <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
-    <a href="/" class="text-center py-2">
-      <img src="assets/img/logo.png" alt="">
-    </a>
-    <div class="card-body">
-      <h4 class="card-title mb-4">Sign in</h4>
-      <form>
-<!--        <a href="#" class="btn btn-facebook btn-block mb-2"><i class="fab fa-facebook-f"></i> &nbsp  Sign in with Facebook</a>-->
-<!--        <a href="#" class="btn btn-google btn-block g-signin2 mb-4" data-onsuccess="onSignIn"> <i class="fab fa-google"></i> &nbsp  Sign in with Google</a>-->
-<!--        <div class="g-signin2" data-onsuccess="onSignIn"></div>-->
-<!--        <a href="#" onclick="signOut();">Sign out</a>-->
-        <div class="form-group">
-          <input name="email" class="form-control" placeholder="Email" type="email" [(ngModel)]="email">
-        </div>
-        <!-- form-group// -->
-        <div class="form-group">
-          <input name="" class="form-control" placeholder="Password" type="password" [(ngModel)]="password">
-        </div>
-        <!-- form-group// -->
+<div class="login-wrapper py-4 my-3" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Sign In</mat-card-title>
+    </mat-card-header>
 
-        <div class="form-group">
-          <a href="#" class="float-right">Forgot password?</a>
-          <label class="float-left custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" checked=""> <div class="custom-control-label"> Remember </div> </label>
-        </div>
-        <!-- form-group form-check .// -->
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block" (click)="login()" [disabled]="btnDisabled"> Login  </button>
-        </div>
-        <!-- form-group// -->
-      </form>
-    </div>
-    <!-- card-body.// -->
-  </div>
-  <!-- card .// -->
+    <form #signInForm="ngForm" (ngSubmit)="signIn(signInForm)">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput name="email" #email="ngModel" [(ngModel)]="user.email" placeholder="Email" type="email" required>
+          <span class="form_error" *ngIf="email.touched && !email.valid">
+            The email is not enter
+        </span>
+        </mat-form-field>
 
-  <p class="text-center mt-4">Don't have account? <a href="/register">Sign up</a></p>
-  <br><br>
-  <!-- ============================ COMPONENT LOGIN  END.// ================================= -->
-
-
-</section>
+        <mat-form-field class="example-full-width">
+          <input matInput name="password" #password="ngModel" [(ngModel)]="user.password"  placeholder="Password" type="password" required>
+          <span class="form_error" *ngIf="password.touched && !password.valid">
+            The password is not enter
+        </span>
+        </mat-form-field>
+      </mat-card-content>
+      <button type="submit" mat-stroked-button color="accent" [disabled]="!signInForm.form.valid" class="btn-block">Sign In</button>
+    </form>
+  </mat-card>
+</div>

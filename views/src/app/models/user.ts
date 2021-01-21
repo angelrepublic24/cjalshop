@@ -1,16 +1,17 @@
 export class User {
     constructor(
-        _id: string,
-        name: string,
-        lname: string,
-        email: string,
-        password: string,
-        birth: Date,
-        sex: string,
-        country: string,
-        phone: number,
-        city: string,
-        address: string
-
+        public name: string,
+        public lname: string,
+        public email: string,
+        public password: string,
+        public birth: Date,
+        public sex: string,
+        public phone: number
     ){}
+}
+export class LoginUser{
+  constructor(
+   public email: string,
+   public password: string
+  ){}
 }
