@@ -93,6 +93,30 @@ var controllers = {
                 user: userRemoved 
             });
         });
+    },
+    getProfile: function(req, res){
+        User.findOne({_id: req.decoded.user.id}, (err, user)=>{
+            res.json({
+                ok: true,
+                user,
+                message: "Successful"
+            })
+        })
+    },
+    updateProfile: function(req, res, next){
+        User.findOne({_id: req.decoded.user.id}, (err, user)=>{
+            if (err) return next(err);
+
+            if (req.body.name) user.name = req.body.name;
+            if (req.body.email) user.email = req.body.email;
+            if (req.body.password) user.password = req.body.password;
+
+            user.save();
+            res.json({
+                ok: true,
+                message: "Successfully edited your profile"
+            })
+        })
     }
 }
 

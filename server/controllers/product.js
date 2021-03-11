@@ -49,15 +49,15 @@ var controllers = {
 
     getAllProduct: function(req, res){
         Product.find({})
-            .exec((err, productDB)=>{
-                if(err) return res.status(500).send({message: 'Error al buscar todos las producto'})
-                if(!productDB) return res.status(400).send({message: 'Productos no encontradas'})
-
-                return res.status(200).json({
-                    ok: true,
-                    productDB
+                .exec((err, productDB)=>{
+                    if(err) return res.status(500).send({message: 'Error al buscar todos las producto'})
+                    if(!productDB) return res.status(400).send({message: 'Productos no encontradas'})
+                
+                    return res.status(200).json({
+                        ok: true,
+                        productDB
+                    })
                 })
-            })
     },
 
     updateProduct: function(req, res){
@@ -119,6 +119,21 @@ var controllers = {
                 message: fileName
             });
         }
+    },
+    getImageFile: function(req, res){
+        var file = req.params.image;
+        var path_file = './uploads/'+file;
+
+        
+        fs.exists(path_file, (exists)=>{
+            if(exists){
+                return res.sendFile(path.resolve(path_file))
+            }else{
+                return res.status(200).send({
+                    message: 'No existe la imagen...'
+                })
+            }
+        })
     }
 }
 

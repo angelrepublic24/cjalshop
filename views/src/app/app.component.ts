@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import {DataService} from './services/data.service'
+import { DataService } from './services/data.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -12,8 +14,10 @@ export class AppComponent {
   searchTerm = '';
   isCollapsed = true;
 
-  constructor(private router: Router, public data: DataService ){
 
+  constructor(private router: Router, public data: DataService ){
+    this.data.cartItems = this.data.getCart().length;
+    this.data.getProfile();
   }
 
   get token() {
